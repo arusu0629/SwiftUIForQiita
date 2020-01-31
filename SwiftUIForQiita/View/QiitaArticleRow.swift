@@ -30,6 +30,6 @@ struct QiitaArticleRow: View {
 
 struct QiitaArticleRow_Previews: PreviewProvider {
     static var previews: some View {
-        QiitaArticleRow(_article: QiitaStruct(id: "1", title: "Swift初心者", user: QiitaStruct.User(name: "なやましまる")))
+        QiitaArticleRow(_article: QiitaStruct(id: "1", title: "Swift初心者", url: "https://qiita.com/arusu0629/items/b0f4da429dde972b9463", user: QiitaStruct.User(name: "なやましまる")))
     }
 }

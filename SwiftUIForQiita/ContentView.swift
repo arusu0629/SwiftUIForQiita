@@ -13,9 +13,13 @@ struct ContentView: View {
     @ObservedObject var qiitaListVM = QiitaListViewModel()
         
     var body: some View {
-//       Text("SwiftUIForQiita")
-        List(qiitaListVM.articles) { article in
-            QiitaArticleRow(_article: article)
+        NavigationView {
+            List(qiitaListVM.articles) { article in
+                NavigationLink(destination: SafariView(url: URL(string: article.url))) {
+                    QiitaArticleRow(_article: article)
+                }
+            }
+            .navigationBarTitle(Text("Swift UI for Qiita"))
         }
     }
 }

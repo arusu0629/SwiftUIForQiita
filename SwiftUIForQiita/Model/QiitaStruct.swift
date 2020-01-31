@@ -11,6 +11,7 @@ import Foundation
 struct QiitaStruct : Codable, Identifiable {
     var id: String
     var title: String
+    var url: String
     var user: User
     struct User: Codable {
         var name: String

@@ -20,7 +20,7 @@ class QiitaViewModel {
         urlComponents.queryItems = [
             URLQueryItem(name: "per_page", value: "50"),
             URLQueryItem(name: "query", value: "swift"),
-            URLQueryItem(name: "Authorization: Bearer", value: "29eb20d87bb3227eda87f9ea744d1ff452621459")
+            URLQueryItem(name: "Authorization: Bearer", value: "2682a616ee9feba00484ea117bbcff844f6ae6ce")
         ]
 
         let task = URLSession.shared.dataTask(with: urlComponents.url!) { data, response, error in
