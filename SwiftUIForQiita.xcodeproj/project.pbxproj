@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E05E25623E449E300D8FC88 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E25523E449E300D8FC88 /* SafariView.swift */; };
+		2E05E25C23E5464700D8FC88 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E25B23E5464700D8FC88 /* KeychainWrapper.swift */; };
 		2EF38C2023E301830035B96A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF38C1F23E301830035B96A /* AppDelegate.swift */; };
 		2EF38C2223E301830035B96A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF38C2123E301830035B96A /* SceneDelegate.swift */; };
 		2EF38C2423E301830035B96A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF38C2323E301830035B96A /* ContentView.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		2E05E25523E449E300D8FC88 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		2E05E25B23E5464700D8FC88 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		2EF38C1C23E301830035B96A /* SwiftUIForQiita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIForQiita.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF38C1F23E301830035B96A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EF38C2123E301830035B96A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E05E25923E5462300D8FC88 /* QiitaKit */ = {
+			isa = PBXGroup;
+			children = (
+				2E05E25A23E5462C00D8FC88 /* Model */,
+			);
+			path = QiitaKit;
+			sourceTree = "<group>";
+		};
+		2E05E25A23E5462C00D8FC88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E05E25B23E5464700D8FC88 /* KeychainWrapper.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2EF38C1323E301830035B96A = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +84,7 @@
 		2EF38C1E23E301830035B96A /* SwiftUIForQiita */ = {
 			isa = PBXGroup;
 			children = (
+				2E05E25923E5462300D8FC88 /* QiitaKit */,
 				2EF38C3923E304770035B96A /* View */,
 				2EF38C3623E302290035B96A /* ViewModel */,
 				2EF38C3323E301F20035B96A /* Model */,
@@ -185,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E05E25C23E5464700D8FC88 /* KeychainWrapper.swift in Sources */,
 				2EF38C3D23E3049B0035B96A /* QiitaArticleRow.swift in Sources */,
 				2EF38C2023E301830035B96A /* AppDelegate.swift in Sources */,
 				2E05E25623E449E300D8FC88 /* SafariView.swift in Sources */,
