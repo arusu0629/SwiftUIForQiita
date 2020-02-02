@@ -9,6 +9,7 @@
 import Foundation
 import WebKit
 import UIKit
+import SwiftUI
 
 /**
 OAuthを行うWebViewの種類
@@ -25,7 +26,7 @@ public enum AuthWebViewType {
 /**
 Qiitaの認証を管理するクラス
 */
-public final class AuthManager {
+public final class AuthManager : ObservableObject {
     /* ====================================================================== */
     // MARK: - Types
     /* ====================================================================== */
@@ -43,8 +44,8 @@ public final class AuthManager {
        // MARK: - Properties
        /* ====================================================================== */
     
-    public static let sharedManager = AuthManager()
-    
+    @ObservedObject public static var sharedManager = AuthManager()
+
     // アクセストークン
     public internal(set) var accessToken: String? {
         get {
@@ -53,9 +54,11 @@ public final class AuthManager {
         set {
             guard let newValue = newValue else {
                 let _ = try? keychain.deleteItem(withKey: KeychainKey.accessToken)
+                authorized = false
                 return
             }
             let _ = try? keychain.save(newValue, forKey: KeychainKey.accessToken)
+            authorized = true
         }
     }
     
@@ -74,10 +77,8 @@ public final class AuthManager {
     }
     
     // Qiitaで認証済みかどうかを返す
-    public var authorized: Bool {
-        return accessToken != nil
-    }
-    
+    @Published var authorized: Bool = false
+
     public private(set) var clientID: String!
     
     public private(set) var clientSecret: String!
@@ -117,6 +118,7 @@ public final class AuthManager {
         if let teamDomain = teamDomain {
             self.teamDomain = teamDomain
         }
+        self.authorized = accessToken != nil
     }
     
     /**
