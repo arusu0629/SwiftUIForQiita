@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>clientID</key>
+	<string>fde5c1af9f7e4724bb2786a577a4ead903723847</string>
+	<key>clientSecret</key>
+	<string>cdd9562deaf1a5c23942ca5bf7b2c65d607f2785</string>
+	<key>redirectURL</key>
+	<string>https://qiita.com/</string>
+</dict>
+</plist>

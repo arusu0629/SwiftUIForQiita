@@ -15,6 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let plistPath = Bundle.main.path(forResource: "Config", ofType: "plist")!
+        let plist = NSDictionary(contentsOfFile: plistPath) as! [String: String]
+        
+        guard let clientID     = plist["clientID"],
+              let clientSecret = plist["clientSecret"],
+              !clientSecret.isEmpty && !clientID.isEmpty else {
+                fatalError("Config.plistにclientID, clientSecretを設定して下さい")
+        }
+        
+        AuthManager.sharedManager.setup(clientID: clientID, clientSecret: clientSecret)
+        
         return true
     }
 

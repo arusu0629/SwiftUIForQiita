@@ -9,6 +9,20 @@
 /* Begin PBXBuildFile section */
 		2E05E25623E449E300D8FC88 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E25523E449E300D8FC88 /* SafariView.swift */; };
 		2E05E25C23E5464700D8FC88 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E25B23E5464700D8FC88 /* KeychainWrapper.swift */; };
+		2E05E25F23E5513500D8FC88 /* QiitaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E25E23E5513500D8FC88 /* QiitaRequest.swift */; };
+		2E05E26223E551A000D8FC88 /* QiitaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E26123E551A000D8FC88 /* QiitaResponse.swift */; };
+		2E05E26423E5572000D8FC88 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E26323E5572000D8FC88 /* AuthManager.swift */; };
+		2E05E26723E557C700D8FC88 /* QiitaKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E26623E557C700D8FC88 /* QiitaKitError.swift */; };
+		2E05E26A23E5589D00D8FC88 /* CustomStringConvertible+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E26923E5589D00D8FC88 /* CustomStringConvertible+Default.swift */; };
+		2E05E26C23E562F500D8FC88 /* AuthorizeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E26B23E562F500D8FC88 /* AuthorizeRequest.swift */; };
+		2E05E26E23E5635600D8FC88 /* QiitaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E26D23E5635600D8FC88 /* QiitaAPI.swift */; };
+		2E05E27023E5660B00D8FC88 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E26F23E5660B00D8FC88 /* EmptyResponse.swift */; };
+		2E05E27223E56D0500D8FC88 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E05E27123E56D0500D8FC88 /* Config.plist */; };
+		2E05E27423E570ED00D8FC88 /* AuthorizedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E27323E570ED00D8FC88 /* AuthorizedView.swift */; };
+		2E05E27623E5768800D8FC88 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E27523E5768800D8FC88 /* LoginView.swift */; };
+		2E05E27823E57A9600D8FC88 /* NSURL+Fragments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E27723E57A9600D8FC88 /* NSURL+Fragments.swift */; };
+		2E05E27A23E57FE500D8FC88 /* AccessTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E27923E57FE500D8FC88 /* AccessTokenRequest.swift */; };
+		2E05E27D23E5806400D8FC88 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E27C23E5806400D8FC88 /* AccessToken.swift */; };
 		2EF38C2023E301830035B96A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF38C1F23E301830035B96A /* AppDelegate.swift */; };
 		2EF38C2223E301830035B96A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF38C2123E301830035B96A /* SceneDelegate.swift */; };
 		2EF38C2423E301830035B96A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF38C2323E301830035B96A /* ContentView.swift */; };
@@ -24,6 +38,20 @@
 /* Begin PBXFileReference section */
 		2E05E25523E449E300D8FC88 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		2E05E25B23E5464700D8FC88 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		2E05E25E23E5513500D8FC88 /* QiitaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaRequest.swift; sourceTree = "<group>"; };
+		2E05E26123E551A000D8FC88 /* QiitaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaResponse.swift; sourceTree = "<group>"; };
+		2E05E26323E5572000D8FC88 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		2E05E26623E557C700D8FC88 /* QiitaKitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaKitError.swift; sourceTree = "<group>"; };
+		2E05E26923E5589D00D8FC88 /* CustomStringConvertible+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomStringConvertible+Default.swift"; sourceTree = "<group>"; };
+		2E05E26B23E562F500D8FC88 /* AuthorizeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeRequest.swift; sourceTree = "<group>"; };
+		2E05E26D23E5635600D8FC88 /* QiitaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPI.swift; sourceTree = "<group>"; };
+		2E05E26F23E5660B00D8FC88 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
+		2E05E27123E56D0500D8FC88 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		2E05E27323E570ED00D8FC88 /* AuthorizedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedView.swift; sourceTree = "<group>"; };
+		2E05E27523E5768800D8FC88 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2E05E27723E57A9600D8FC88 /* NSURL+Fragments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSURL+Fragments.swift"; sourceTree = "<group>"; };
+		2E05E27923E57FE500D8FC88 /* AccessTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenRequest.swift; sourceTree = "<group>"; };
+		2E05E27C23E5806400D8FC88 /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 		2EF38C1C23E301830035B96A /* SwiftUIForQiita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIForQiita.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF38C1F23E301830035B96A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EF38C2123E301830035B96A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +80,13 @@
 		2E05E25923E5462300D8FC88 /* QiitaKit */ = {
 			isa = PBXGroup;
 			children = (
+				2E05E27B23E5805B00D8FC88 /* Entities */,
+				2E05E26823E5588E00D8FC88 /* Extensions */,
+				2E05E26023E5519700D8FC88 /* Responses */,
+				2E05E25D23E5512900D8FC88 /* Requests */,
 				2E05E25A23E5462C00D8FC88 /* Model */,
+				2E05E26623E557C700D8FC88 /* QiitaKitError.swift */,
+				2E05E26D23E5635600D8FC88 /* QiitaAPI.swift */,
 			);
 			path = QiitaKit;
 			sourceTree = "<group>";
@@ -61,8 +95,45 @@
 			isa = PBXGroup;
 			children = (
 				2E05E25B23E5464700D8FC88 /* KeychainWrapper.swift */,
+				2E05E26323E5572000D8FC88 /* AuthManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2E05E25D23E5512900D8FC88 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				2E05E25E23E5513500D8FC88 /* QiitaRequest.swift */,
+				2E05E26B23E562F500D8FC88 /* AuthorizeRequest.swift */,
+				2E05E27923E57FE500D8FC88 /* AccessTokenRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		2E05E26023E5519700D8FC88 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				2E05E26123E551A000D8FC88 /* QiitaResponse.swift */,
+				2E05E26F23E5660B00D8FC88 /* EmptyResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		2E05E26823E5588E00D8FC88 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2E05E26923E5589D00D8FC88 /* CustomStringConvertible+Default.swift */,
+				2E05E27723E57A9600D8FC88 /* NSURL+Fragments.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2E05E27B23E5805B00D8FC88 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2E05E27C23E5806400D8FC88 /* AccessToken.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		2EF38C1323E301830035B96A = {
@@ -95,6 +166,7 @@
 				2EF38C2A23E301850035B96A /* LaunchScreen.storyboard */,
 				2EF38C2D23E301850035B96A /* Info.plist */,
 				2EF38C2723E301850035B96A /* Preview Content */,
+				2E05E27123E56D0500D8FC88 /* Config.plist */,
 			);
 			path = SwiftUIForQiita;
 			sourceTree = "<group>";
@@ -129,6 +201,8 @@
 			children = (
 				2EF38C3C23E3049B0035B96A /* QiitaArticleRow.swift */,
 				2E05E25523E449E300D8FC88 /* SafariView.swift */,
+				2E05E27323E570ED00D8FC88 /* AuthorizedView.swift */,
+				2E05E27523E5768800D8FC88 /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E05E27223E56D0500D8FC88 /* Config.plist in Resources */,
 				2EF38C2C23E301850035B96A /* LaunchScreen.storyboard in Resources */,
 				2EF38C2923E301850035B96A /* Preview Assets.xcassets in Resources */,
 				2EF38C2623E301850035B96A /* Assets.xcassets in Resources */,
@@ -205,14 +280,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E05E25C23E5464700D8FC88 /* KeychainWrapper.swift in Sources */,
+				2E05E26423E5572000D8FC88 /* AuthManager.swift in Sources */,
 				2EF38C3D23E3049B0035B96A /* QiitaArticleRow.swift in Sources */,
+				2E05E27423E570ED00D8FC88 /* AuthorizedView.swift in Sources */,
+				2E05E26723E557C700D8FC88 /* QiitaKitError.swift in Sources */,
 				2EF38C2023E301830035B96A /* AppDelegate.swift in Sources */,
+				2E05E27A23E57FE500D8FC88 /* AccessTokenRequest.swift in Sources */,
+				2E05E27823E57A9600D8FC88 /* NSURL+Fragments.swift in Sources */,
 				2E05E25623E449E300D8FC88 /* SafariView.swift in Sources */,
 				2EF38C3523E302030035B96A /* QiitaStruct.swift in Sources */,
+				2E05E26A23E5589D00D8FC88 /* CustomStringConvertible+Default.swift in Sources */,
+				2E05E26C23E562F500D8FC88 /* AuthorizeRequest.swift in Sources */,
+				2E05E27023E5660B00D8FC88 /* EmptyResponse.swift in Sources */,
 				2EF38C2223E301830035B96A /* SceneDelegate.swift in Sources */,
 				2EF38C3823E302320035B96A /* QiitaViewModel.swift in Sources */,
+				2E05E26E23E5635600D8FC88 /* QiitaAPI.swift in Sources */,
 				2EF38C2423E301830035B96A /* ContentView.swift in Sources */,
+				2E05E25F23E5513500D8FC88 /* QiitaRequest.swift in Sources */,
+				2E05E27623E5768800D8FC88 /* LoginView.swift in Sources */,
+				2E05E26223E551A000D8FC88 /* QiitaResponse.swift in Sources */,
 				2EF38C3F23E315220035B96A /* QiitaListViewModel.swift in Sources */,
+				2E05E27D23E5806400D8FC88 /* AccessToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
