@@ -10,11 +10,17 @@ import Foundation
 
 class QiitaListViewModel : ObservableObject {
 
-    @Published var articles: [QiitaStruct] = []
+    @Published var articles: [Item] = []
     
-    init() {
-        QiitaViewModel.fetchArticle { _articles in
-            self.articles = _articles
+    func fetchGetItems(type: QiitaAPI.Item.ItemsType, page: Int, perPage: Int) {
+        let request = QiitaAPI.Item.GetItemsRequest(type: type, page: page, perPage: perPage)
+        APIClient().send(request) { result in
+            switch result {
+            case .success(let response):
+                self.articles = response.objects
+            case .failure(let error):
+                print("failure error = \(error)")
+            }
         }
     }
 }

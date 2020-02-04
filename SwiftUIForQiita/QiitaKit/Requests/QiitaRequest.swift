@@ -54,12 +54,9 @@ extension QiitaRequest {
         var result = ["Content-Type": "application/json"]
         
         // TODO: アクセストークン処理
-        let token = "accessToken"
-        /*
-        guard let token = accessToken else {
+        guard let token = AuthManager.sharedManager.accessToken else {
             return result
         }
-        */
         
         result["Authorization"] = "Bearer \(token)"
         

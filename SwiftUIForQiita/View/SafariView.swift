@@ -12,7 +12,7 @@ import WebKit
 struct SafariView: UIViewRepresentable {
 
     var url: URL?
-
+    
     func makeUIView(context: Context) -> WKWebView {
         return WKWebView()
     }

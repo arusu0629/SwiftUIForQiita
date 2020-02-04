@@ -16,7 +16,7 @@ class QiitaViewModel {
         guard var urlComponents = URLComponents(string: url) else {
             return
         }
-
+        
         urlComponents.queryItems = [
             URLQueryItem(name: "per_page", value: "50"),
             URLQueryItem(name: "query", value: "swift"),
