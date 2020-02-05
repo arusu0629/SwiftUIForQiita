@@ -9,9 +9,12 @@
 import SwiftUI
 
 struct RootView: View {
+    
+    @ObservedObject var authManager = AuthManager.sharedManager
+
     var body: some View {
         NavigationView {
-            if (AuthManager.sharedManager.authorized) {
+            if (self.authManager.authorized) {
                 ContentView()
             } else {
                 LoginView()

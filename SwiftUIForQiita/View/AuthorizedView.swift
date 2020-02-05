@@ -45,7 +45,6 @@ struct AuthorizedView: UIViewRepresentable {
             switch result {
             case .success(let accessTokenResponse):
                 AuthManager.sharedManager.accessToken = accessTokenResponse.token
-                print("accessToken = \(accessTokenResponse.token)")
                 self.presentation.wrappedValue.dismiss()
             case .failure(let error):
                 print("[accessTokenRequest] failure error = \(error)")

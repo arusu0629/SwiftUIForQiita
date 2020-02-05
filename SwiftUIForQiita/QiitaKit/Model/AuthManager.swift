@@ -159,7 +159,11 @@ public final class AuthManager : ObservableObject {
     */
     
     public func logout() throws {
-        
+        if (try? deleteToken()) != nil {
+            accessToken = nil
+        }
+        try removeWKWebViewCache()
+        removeUIWebViewCaches()
     }
     
     /**
