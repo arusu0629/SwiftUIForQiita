@@ -15,6 +15,7 @@ struct LoginView: View {
                 Text("Qiitaアカウントでログイン")
             }
         }
+        .hideNavigationBar()
     }
 }
 

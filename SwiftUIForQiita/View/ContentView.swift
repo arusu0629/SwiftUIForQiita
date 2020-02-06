@@ -25,28 +25,41 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
+            // ログアウトボタンを押したら最初のビューに戻る
             if (isPushedLogout) {
                 RootView()
             } else {
-                List(qiitaListVM.articles) { article in
-                    NavigationLink(destination: SafariView(url: article.URL)) {
-                        QiitaArticleRow(_article: article)
-                    }
+                TabView {
+                    // RecentlyView
+                    QiitaArticleView(_articles: qiitaListVM.articles)
+                        .tabItem {
+                            Image(systemName: "1.square.fill")
+                            Text("Recently")
+                        }
+                    // FavoriteView
+                    Text("お気に入り")
+                        .tabItem {
+                            Image(systemName: "2.square.fill")
+                            Text("Favorite")
+                        }
+                    // HistoryView
+                    Text("履歴")
+                        .tabItem {
+                            Image(systemName: "3.square.fill")
+                            Text("History")
+                        }
                 }
                 .navigationBarTitle("SwiftUI For Qiita", displayMode: .inline)
-                .navigationBarItems(leading: Button(action: {
+                .navigationBarItems(trailing: Button(action: {
                     self.showingLogoutAlert = true
                 }) {
+                    // TODO: 画像変更
                     Image(systemName: "hand.thumbsdown")
                 })
                 .alert(isPresented: $showingLogoutAlert) {
                     logoutAlert()
                 }
             }
-        }
-        .hideNavigationBar()
-        .onAppear {
-            self.isPushedLogout = false
         }
     }
     
@@ -64,22 +77,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-public struct NavigationBarHider: ViewModifier {
-    @State var isHidden: Bool = false
-
-    public func body(content: Content) -> some View {
-        content
-            .navigationBarTitle("")
-            .navigationBarHidden(isHidden)
-            .onAppear { self.isHidden = true }
-    }
-}
-
-extension View {
-    public func hideNavigationBar() -> some View {
-        modifier(NavigationBarHider())
     }
 }

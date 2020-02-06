@@ -136,7 +136,7 @@ public final class AuthManager : ObservableObject {
                           completion: @escaping AuthCompletionHandler) {
         let authInfo = (state: UUID().uuidString, redirectURL: redirectURL, completion: completion)
         
-        let request = QiitaAPI.Authorization.AuthorizeRequest.init(clientID: clientID, scopes: scopes, state: authInfo.state)
+        _ = QiitaAPI.Authorization.AuthorizeRequest.init(clientID: clientID, scopes: scopes, state: authInfo.state)
         
         // TODO: 認証画面を表示する
         /*

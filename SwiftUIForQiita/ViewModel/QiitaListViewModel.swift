@@ -14,6 +14,7 @@ class QiitaListViewModel : ObservableObject {
     
     func fetchGetItems(type: QiitaAPI.Item.ItemsType, page: Int, perPage: Int) {
         let request = QiitaAPI.Item.GetItemsRequest(type: type, page: page, perPage: perPage)
+        print("url = \(request.asURLRequest())")
         APIClient().send(request) { result in
             switch result {
             case .success(let response):
