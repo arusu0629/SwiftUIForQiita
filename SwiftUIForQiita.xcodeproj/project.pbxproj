@@ -31,6 +31,8 @@
 		2E05E28923E8766200D8FC88 /* PageableResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E28823E8766200D8FC88 /* PageableResponse.swift */; };
 		2E05E28B23E8835100D8FC88 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E28A23E8835100D8FC88 /* File.swift */; };
 		2E05E28D23E9419900D8FC88 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E28C23E9419900D8FC88 /* RootView.swift */; };
+		2E05E28F23EB01B000D8FC88 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05E28E23EB01B000D8FC88 /* Data.swift */; };
+		2E05E29223EB030A00D8FC88 /* articleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E05E29123EB030A00D8FC88 /* articleData.json */; };
 		2EF38C2023E301830035B96A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF38C1F23E301830035B96A /* AppDelegate.swift */; };
 		2EF38C2223E301830035B96A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF38C2123E301830035B96A /* SceneDelegate.swift */; };
 		2EF38C2423E301830035B96A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF38C2323E301830035B96A /* ContentView.swift */; };
@@ -68,6 +70,8 @@
 		2E05E28823E8766200D8FC88 /* PageableResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageableResponse.swift; sourceTree = "<group>"; };
 		2E05E28A23E8835100D8FC88 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		2E05E28C23E9419900D8FC88 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		2E05E28E23EB01B000D8FC88 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		2E05E29123EB030A00D8FC88 /* articleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = articleData.json; sourceTree = "<group>"; };
 		2EF38C1C23E301830035B96A /* SwiftUIForQiita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIForQiita.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF38C1F23E301830035B96A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EF38C2123E301830035B96A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +163,14 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		2E05E29023EB02B000D8FC88 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2E05E29123EB030A00D8FC88 /* articleData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		2EF38C1323E301830035B96A = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +190,7 @@
 		2EF38C1E23E301830035B96A /* SwiftUIForQiita */ = {
 			isa = PBXGroup;
 			children = (
+				2E05E29023EB02B000D8FC88 /* Resources */,
 				2E05E25923E5462300D8FC88 /* QiitaKit */,
 				2EF38C3923E304770035B96A /* View */,
 				2EF38C3623E302290035B96A /* ViewModel */,
@@ -191,6 +204,7 @@
 				2EF38C2D23E301850035B96A /* Info.plist */,
 				2EF38C2723E301850035B96A /* Preview Content */,
 				2E05E27123E56D0500D8FC88 /* Config.plist */,
+				2E05E28E23EB01B000D8FC88 /* Data.swift */,
 			);
 			path = SwiftUIForQiita;
 			sourceTree = "<group>";
@@ -289,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E05E29223EB030A00D8FC88 /* articleData.json in Resources */,
 				2E05E27223E56D0500D8FC88 /* Config.plist in Resources */,
 				2EF38C2C23E301850035B96A /* LaunchScreen.storyboard in Resources */,
 				2EF38C2923E301850035B96A /* Preview Assets.xcassets in Resources */,
@@ -316,6 +331,7 @@
 				2E05E27A23E57FE500D8FC88 /* AccessTokenRequest.swift in Sources */,
 				2E05E27823E57A9600D8FC88 /* NSURL+Fragments.swift in Sources */,
 				2E05E25623E449E300D8FC88 /* SafariView.swift in Sources */,
+				2E05E28F23EB01B000D8FC88 /* Data.swift in Sources */,
 				2EF38C3523E302030035B96A /* QiitaStruct.swift in Sources */,
 				2E05E28D23E9419900D8FC88 /* RootView.swift in Sources */,
 				2E05E26A23E5589D00D8FC88 /* CustomStringConvertible+Default.swift in Sources */,
