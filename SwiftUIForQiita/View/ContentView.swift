@@ -12,6 +12,7 @@ struct ContentView: View {
     
     @ObservedObject var qiitaListVM = QiitaListViewModel()
     @ObservedObject var authManager = AuthManager.sharedManager
+    @ObservedObject var historyManager = QiitaHistoryManager.sharedManager
     
     @State private var showingLogoutAlert = false
     @State private var isPushedLogout = false
@@ -43,11 +44,20 @@ struct ContentView: View {
                             Text("Favorite")
                         }
                     // HistoryView
-                    Text("履歴")
+                    if (QiitaHistoryManager.sharedManager.recentlyQiitaListItems.count <= 0) {
+                        Text("履歴はまだありません")
                         .tabItem {
                             Image(systemName: "3.square.fill")
                             Text("History")
                         }
+                    }
+                    else {
+                        QiitaArticleView(_articles: historyManager.recentlyQiitaListItems)
+                        .tabItem {
+                            Image(systemName: "3.square.fill")
+                            Text("History")
+                        }
+                    }
                 }
                 .navigationBarTitle("SwiftUI For Qiita", displayMode: .inline)
                 .navigationBarItems(trailing: Button(action: {

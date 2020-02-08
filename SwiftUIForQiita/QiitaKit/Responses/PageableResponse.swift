@@ -46,7 +46,6 @@ public struct PageableResponse<Element: Decodable>: QiitaResponse {
             let link = response.allHeaderFields["Link"] as! String
             let range = NSRange(location: 0, length: link.count)
             let pattern = "<.+[\\?|&]page=([0-9]+)[^>]*>; rel=\"\(target)\""
-            print("link = \(link)")
             
             guard let matched = try! NSRegularExpression(pattern: pattern).firstMatch(in: link, options: [], range: range) else {
                 return nil

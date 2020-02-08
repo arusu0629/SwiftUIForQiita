@@ -19,7 +19,13 @@ struct QiitaArticleView: View {
     var body: some View {
         VStack {
             List(articles) { article in
-                NavigationLink(destination: SafariView(url: article.URL)) {
+                NavigationLink(destination:
+                    SafariView(url: article.URL)
+                    .onAppear() {
+                        // ページを開いたら履歴に登録
+                        QiitaHistoryManager.sharedManager.read(readArticle: article)
+                    }
+                ) {
                     QiitaArticleRowView(_article: article)
                 }
             }
