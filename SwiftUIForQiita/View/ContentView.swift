@@ -25,41 +25,23 @@ struct ContentView: View {
             } else {
                 TabView {
                     // RecentlyView
-                    QiitaArticleView(_articles: qiitaListVM.articles)
+                    QiitaArticleView(qiitaListVM: qiitaListVM)
                         .tabItem {
                             Image(systemName: "1.square.fill")
                             Text("Recently")
                         }
                     // FavoriteView
-                    if (storeManager.favoriteItems.count <= 0) {
-                        Text("まだお気に入りはありません")
+                    QiitaArticleFavoriteView(_articles: storeManager.favoriteItems)
                         .tabItem {
                             Image(systemName: "2.square.fill")
                             Text("Favorite")
                         }
-                    }
-                    else {
-                        QiitaArticleView(_articles: storeManager.favoriteItems)
-                        .tabItem {
-                            Image(systemName: "2.square.fill")
-                            Text("Favorite")
-                        }
-                    }
                     // HistoryView
-                    if (storeManager.recentlyItems.count <= 0) {
-                        Text("履歴はまだありません")
+                    QiitaArticleHistoryView(_articles: storeManager.recentlyItems)
                         .tabItem {
                             Image(systemName: "3.square.fill")
                             Text("History")
                         }
-                    }
-                    else {
-                        QiitaArticleView(_articles: storeManager.recentlyItems)
-                        .tabItem {
-                            Image(systemName: "3.square.fill")
-                            Text("History")
-                        }
-                    }
                 }
                 .navigationBarTitle("SwiftUI For Qiita", displayMode: .inline)
                 .navigationBarItems(trailing: Button(action: {

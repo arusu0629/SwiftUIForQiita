@@ -7,21 +7,32 @@
 //
 
 import SwiftUI
+import SwiftUIRefresh
 
 struct QiitaArticleView: View {
 
-    private var articles: [Item]
-
-    init(_articles: [Item]) {
-        self.articles = _articles
+    @State private var isShowing = false
+    @ObservedObject private var qiitaListVM: QiitaListViewModel
+    
+    init(qiitaListVM: QiitaListViewModel) {
+        self.qiitaListVM = qiitaListVM
     }
 
     var body: some View {
         VStack {
-            List(articles) { article in
-                QiitaArticleRowView(_article: article)
+            if (self.qiitaListVM.articles.count <= 0) {
+                Text("記事がまだありません")
             }
-           
+            else {
+                List(self.qiitaListVM.articles) { article in
+                    QiitaArticleRowView(_article: article)
+                }
+                .pullToRefresh(isShowing: $isShowing) {
+                    self.qiitaListVM.reloadItems(onCompletion: {
+                        self.isShowing = false
+                    })
+                }
+            }
         }
     }
 }
@@ -30,7 +41,7 @@ struct QiitaArticleView_Previews: PreviewProvider {
     @State static private var isHidden = false
     static var previews: some View {
         NavigationView {
-            QiitaArticleView(_articles: articleData)
+            QiitaArticleView(qiitaListVM: QiitaListViewModel())
         }
     }
 }
