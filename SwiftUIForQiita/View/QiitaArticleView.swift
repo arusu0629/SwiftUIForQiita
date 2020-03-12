@@ -12,6 +12,7 @@ import SwiftUIRefresh
 struct QiitaArticleView: View {
 
     @State private var isShowing = false
+    @State private var isFetching = false
     @ObservedObject private var qiitaListVM: QiitaListViewModel
     
     init(qiitaListVM: QiitaListViewModel) {
@@ -21,7 +22,7 @@ struct QiitaArticleView: View {
     var body: some View {
         VStack {
             if (self.qiitaListVM.articles.count <= 0) {
-                Text("記事がまだありません")
+                ActivityIndicator(isAnimating: self.$isFetching, style: .medium)
             }
             else {
                 List(self.qiitaListVM.articles) { article in
@@ -34,6 +35,16 @@ struct QiitaArticleView: View {
                 }
             }
         }
+        .onAppear() {
+            self.fetchArticles()
+        }
+    }
+    
+    private func fetchArticles() {
+        self.isFetching = true
+        self.qiitaListVM.reloadItems(onCompletion: {
+            self.isFetching = false
+        })
     }
 }
 

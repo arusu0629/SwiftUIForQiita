@@ -12,10 +12,6 @@ class QiitaListViewModel : ObservableObject {
 
     @Published var articles: [Item] = []
     
-    init() {
-        reloadItems { }
-    }
-    
     func reloadItems(onCompletion: @escaping () -> Void) {
         fetchGetItems(type: .query(query: "Swift"), page: 1, perPage: 50, onCompletion: onCompletion)
     }
