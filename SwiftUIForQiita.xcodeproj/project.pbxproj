@@ -41,6 +41,7 @@
 		2EDB90B5241A1EA900BB5F74 /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 2EDB90B4241A1EA900BB5F74 /* SwiftUIRefresh */; };
 		2EDB90B7241A241C00BB5F74 /* QiitaArticleFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDB90B6241A241C00BB5F74 /* QiitaArticleFavoriteView.swift */; };
 		2EDB90B9241A248D00BB5F74 /* QiitaArticleHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDB90B8241A248D00BB5F74 /* QiitaArticleHistoryView.swift */; };
+		2EDB90BC241A300400BB5F74 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 2EDB90BB241A300400BB5F74 /* SwiftDate */; };
 		2EF38C2023E301830035B96A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF38C1F23E301830035B96A /* AppDelegate.swift */; };
 		2EF38C2223E301830035B96A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF38C2123E301830035B96A /* SceneDelegate.swift */; };
 		2EF38C2423E301830035B96A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF38C2323E301830035B96A /* ContentView.swift */; };
@@ -106,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EDB90BC241A300400BB5F74 /* SwiftDate in Frameworks */,
 				2EDB90B5241A1EA900BB5F74 /* SwiftUIRefresh in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +288,7 @@
 			name = SwiftUIForQiita;
 			packageProductDependencies = (
 				2EDB90B4241A1EA900BB5F74 /* SwiftUIRefresh */,
+				2EDB90BB241A300400BB5F74 /* SwiftDate */,
 			);
 			productName = SwiftUIForQiita;
 			productReference = 2EF38C1C23E301830035B96A /* SwiftUIForQiita.app */;
@@ -317,6 +320,7 @@
 			mainGroup = 2EF38C1323E301830035B96A;
 			packageReferences = (
 				2EDB90B3241A1EA800BB5F74 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
+				2EDB90BA241A300400BB5F74 /* XCRemoteSwiftPackageReference "SwiftDate" */,
 			);
 			productRefGroup = 2EF38C1D23E301830035B96A /* Products */;
 			projectDirPath = "";
@@ -592,6 +596,14 @@
 				minimumVersion = 0.0.2;
 			};
 		};
+		2EDB90BA241A300400BB5F74 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -599,6 +611,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2EDB90B3241A1EA800BB5F74 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;
 			productName = SwiftUIRefresh;
+		};
+		2EDB90BB241A300400BB5F74 /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2EDB90BA241A300400BB5F74 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

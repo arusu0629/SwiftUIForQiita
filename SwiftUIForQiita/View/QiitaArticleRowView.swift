@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SwiftDate
 
 struct QiitaArticleRowView: View {
     
@@ -28,8 +29,8 @@ struct QiitaArticleRowView: View {
                     .frame(width: 20, height: 20)
                 Text(self.article.user.name ?? "名無しさん")
                 Spacer()
-                // TODO: 現在時刻との差分
-                Text(self.article.updatedAt.description)
+                // 投稿日時表示
+                Text(articlePostedDateString(postedDate: self.article.createdAt))
             }
             NavigationLink(destination: getSafariView(article: self.article)) {
                 Text(self.article.title)
@@ -65,6 +66,26 @@ struct QiitaArticleRowView: View {
     
     private func isFavorite(id: String) -> Bool {
         return QiitaItemStoreManager.sharedManager.favoriteItems.contains { (item) in item.id == id }
+    }
+    
+    private func articlePostedDateString(postedDate: Date) -> String {
+
+        let now = Date()
+        let diff = now - postedDate
+
+        if let month = diff.month, month > 0 {
+            return "\(month)月前"
+        }
+        if let day = diff.day, day > 0 {
+            return "\(day)日前"
+        }
+        if let hour = diff.hour, hour > 0 {
+            return "\(hour)時間前"
+        }
+        if let minute = diff.minute, minute > 0 {
+            return "\(minute)分前"
+        }
+        return "\(diff.second ?? 1)秒前"
     }
 }
 
