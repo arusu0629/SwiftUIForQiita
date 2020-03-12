@@ -44,15 +44,15 @@ struct ContentView: View {
                         }
                 }
                 .navigationBarTitle("SwiftUI For Qiita", displayMode: .inline)
-                .navigationBarItems(trailing: Button(action: {
-                    self.showingLogoutAlert = true
-                }) {
-                    // TODO: 画像変更
-                    Image(systemName: "hand.thumbsdown")
-                })
-                .alert(isPresented: $showingLogoutAlert) {
-                    logoutAlert()
-                }
+//                .navigationBarItems(trailing: Button(action: {
+//                    self.showingLogoutAlert = true
+//                }) {
+//                    // TODO: 画像変更
+//                    Image(systemName: "hand.thumbsdown")
+//                })
+//                .alert(isPresented: $showingLogoutAlert) {
+//                    logoutAlert()
+//                }
             }
         }
     }

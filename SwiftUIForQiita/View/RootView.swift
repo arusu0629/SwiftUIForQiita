@@ -14,11 +14,12 @@ struct RootView: View {
     
     var body: some View {
         VStack {
-            if (self.authManager.authorized) {
-                ContentView()
-            } else {
-                LoginView()
-            }
+//            if (self.authManager.authorized) {
+//                ContentView()
+//            } else {
+//                LoginView()
+//            }
+            ContentView()
         }
     }
 }
