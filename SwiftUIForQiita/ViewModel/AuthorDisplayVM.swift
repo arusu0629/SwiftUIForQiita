@@ -21,7 +21,9 @@ class AuthorDisplayVM : ObservableObject {
             guard let displayImage = UIImage(data: imageData) else {
                 return
             }
-            self.displayImage = displayImage
+            DispatchQueue.main.async {
+                self.displayImage = displayImage
+            }
         }
         task.resume()
     }

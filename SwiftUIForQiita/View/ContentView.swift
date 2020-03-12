@@ -12,17 +12,10 @@ struct ContentView: View {
     
     @ObservedObject var qiitaListVM = QiitaListViewModel()
     @ObservedObject var authManager = AuthManager.sharedManager
-    @ObservedObject var historyManager = QiitaHistoryManager.sharedManager
-    
+    @ObservedObject var storeManager = QiitaItemStoreManager.sharedManager
+
     @State private var showingLogoutAlert = false
     @State private var isPushedLogout = false
-
-    init() {
-        // 記事を取得する
-        if (qiitaListVM.articles.count <= 0) {
-            qiitaListVM.fetchGetItems(type: .query(query: "Swift"), page: 1, perPage: 50)
-        }
-    }
 
     var body: some View {
         NavigationView {
@@ -38,13 +31,22 @@ struct ContentView: View {
                             Text("Recently")
                         }
                     // FavoriteView
-                    Text("お気に入り")
+                    if (storeManager.favoriteItems.count <= 0) {
+                        Text("まだお気に入りはありません")
                         .tabItem {
                             Image(systemName: "2.square.fill")
                             Text("Favorite")
                         }
+                    }
+                    else {
+                        QiitaArticleView(_articles: storeManager.favoriteItems)
+                        .tabItem {
+                            Image(systemName: "2.square.fill")
+                            Text("Favorite")
+                        }
+                    }
                     // HistoryView
-                    if (QiitaHistoryManager.sharedManager.recentlyQiitaListItems.count <= 0) {
+                    if (storeManager.recentlyItems.count <= 0) {
                         Text("履歴はまだありません")
                         .tabItem {
                             Image(systemName: "3.square.fill")
@@ -52,7 +54,7 @@ struct ContentView: View {
                         }
                     }
                     else {
-                        QiitaArticleView(_articles: historyManager.recentlyQiitaListItems)
+                        QiitaArticleView(_articles: storeManager.recentlyItems)
                         .tabItem {
                             Image(systemName: "3.square.fill")
                             Text("History")

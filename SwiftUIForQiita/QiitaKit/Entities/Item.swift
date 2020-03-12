@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 // ユーザからの投稿を表します
 public struct Item: Codable, CustomStringConvertible, Identifiable, QiitaResponse {
